@@ -1,89 +1,982 @@
 @import "tailwindcss";
 
+/* =========================================================
+   TAILWIND V4 DARK MODE FIX
+   Makes dark: classes respond to <html class="dark">
+========================================================= */
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+/* =========================================================
+   CAMPUSNOVA THEME VARIABLES (PREMIUM COLOR SYSTEM)
+========================================================= */
+
 @layer base {
+
   :root {
-    --bg-deep: #050608;
-    --bg-card: rgba(18, 20, 29, 0.7);
-    --border-glow: rgba(234, 179, 8, 0.15);
+    /* Canvas & Surfaces (Light Mode) */
+    --bg-main: #F7F4ED; /* Ivory */
+    --bg-card: #FFFFFF; /* Pure White */
+    --bg-surface-secondary: #EEF3EE; /* Secondary surfaces */
+    --bg-surface-sage: #E5EFE8; /* Soft Sage */
+    --border-color: #D9E1DB; /* Borders */
+
+    /* Typography */
+    --text-heading: #18201C; /* Charcoal Primary text */
+    --text-muted: #5D6962; /* Slate Secondary text */
+
+    /* Brand Core */
+    --brand-forest: #12372A;
+    --brand-emerald: #1F8A5B;
+    --brand-fresh: #4CAF73;
+    --brand-gold: #E7B84B;
+    --brand-ivory: #F7F4ED;
+    --brand-charcoal: #18201C;
+    --brand-slate: #5D6962;
+    --brand-sage: #E5EFE8;
+
+    /* Semantic Status */
+    --status-success: #4F9D69;
+    --status-info: #6B8F71;
+    --status-warning: #D99A32;
+    --status-critical: #C94A3A;
+
+    /* Map & Wayfinding */
+    --map-building: #D9DDD8;
+    --map-selected: #1F8A5B;
+    --map-destination: #E7B84B;
+    --map-route: #4CAF73;
+    --map-restricted: #C96A4A;
+
+    /* Ambient Glows */
+    --glow-emerald: rgba(31, 138, 91, 0.22);
+    --glow-gold: rgba(231, 184, 75, 0.22);
+    --glow-forest: rgba(18, 55, 42, 0.12);
+
+    /* Surfaces & Actions */
+    --surface-primary: #F7F4ED;
+    --surface-secondary: #EEF3EE;
+    --primary-action: #1F8A5B;
   }
+
+
+  /* =======================================================
+     DARK THEME (DEEP ABYSSAL MOSS & FOREST ACCENTS)
+  ======================================================= */
+
+  html.dark {
+
+    --bg-main: #0D1511;
+
+    --bg-card: #152019;
+
+    --bg-surface-secondary: #1C2921;
+
+    --bg-surface-sage: #233328;
+
+    --border-color: #2D3A32;
+
+    --text-heading: #F5F3EA;
+
+    --text-muted: #AEB9B1;
+
+    --brand-forest: #12372A;
+    --brand-emerald: #1F8A5B;
+    --brand-fresh: #4CAF73;
+    --brand-gold: #E7B84B;
+    --brand-ivory: #F7F4ED;
+    --brand-charcoal: #18201C;
+    --brand-slate: #5D6962;
+    --brand-sage: #E5EFE8;
+
+    --status-success: #4F9D69;
+    --status-info: #6B8F71;
+    --status-warning: #D99A32;
+    --status-critical: #C94A3A;
+
+    --map-building: #D9DDD8;
+    --map-selected: #1F8A5B;
+    --map-destination: #E7B84B;
+    --map-route: #4CAF73;
+    --map-restricted: #C96A4A;
+
+    --glow-emerald: rgba(63, 174, 117, 0.35);
+
+    --glow-gold: rgba(231, 184, 75, 0.32);
+
+    --glow-forest: rgba(18, 55, 42, 0.45);
+
+    --surface-primary: #0D1511;
+
+    --surface-secondary: #1C2921;
+
+    --primary-action: #3FAE75;
+  }
+
+
+  /* =======================================================
+     LIGHT THEME (WARM IVORY & ARCHITECTURAL SAGE)
+  ======================================================= */
+
+  html.light {
+
+    --bg-main: #F7F4ED;
+
+    --bg-card: #FFFFFF;
+
+    --bg-surface-secondary: #EEF3EE;
+
+    --bg-surface-sage: #E5EFE8;
+
+    --border-color: #D9E1DB;
+
+    --text-heading: #18201C;
+
+    --text-muted: #5D6962;
+
+    --brand-forest: #12372A;
+    --brand-emerald: #1F8A5B;
+    --brand-fresh: #4CAF73;
+    --brand-gold: #E7B84B;
+    --brand-ivory: #F7F4ED;
+    --brand-charcoal: #18201C;
+    --brand-slate: #5D6962;
+    --brand-sage: #E5EFE8;
+
+    --status-success: #4F9D69;
+    --status-info: #6B8F71;
+    --status-warning: #D99A32;
+    --status-critical: #C94A3A;
+
+    --map-building: #D9DDD8;
+    --map-selected: #1F8A5B;
+    --map-destination: #E7B84B;
+    --map-route: #4CAF73;
+    --map-restricted: #C96A4A;
+
+    --glow-emerald: rgba(31, 138, 91, 0.22);
+
+    --glow-gold: rgba(231, 184, 75, 0.22);
+
+    --glow-forest: rgba(18, 55, 42, 0.12);
+
+    --surface-primary: #F7F4ED;
+
+    --surface-secondary: #EEF3EE;
+
+    --primary-action: #1F8A5B;
+  }
+
+
+  /* =======================================================
+     HTML
+  ======================================================= */
+
+  html {
+
+    background-color: var(--bg-main);
+
+    transition:
+      background-color 0.3s ease,
+      color 0.3s ease;
+
+  }
+
+
+  /* =======================================================
+     BODY
+  ======================================================= */
 
   body {
-    background-color: #07070a;
-    color: #e2e8f0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+    background-color: var(--bg-main);
+
+    color: var(--text-heading);
+
+    font-family:
+      "Plus Jakarta Sans",
+      system-ui,
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      Roboto,
+      sans-serif;
+
     overflow-x: hidden;
+
     margin: 0;
+
     padding: 0;
-    selection-background-color: #f59e0b;
-    selection-color: #000;
+
+    transition:
+      background-color 0.3s ease,
+      color 0.3s ease;
+
   }
+
+
+  /* =======================================================
+     ROOT
+  ======================================================= */
 
   #root {
+
     width: 100%;
+
     min-height: 100vh;
+
     margin: 0;
+
     padding: 0;
+
     max-width: 100%;
+
     display: flex;
+
     flex-direction: column;
+
     text-align: left;
-    border: none;
+
+    background-color: var(--bg-main);
+
+    transition:
+      background-color 0.3s ease,
+      color 0.3s ease;
+
   }
+
 }
 
-/* Custom cinematic effects */
-.glow-gold {
-  box-shadow: 0 0 35px -5px rgba(245, 158, 11, 0.35);
-}
 
-.glow-cyan {
-  box-shadow: 0 0 35px -5px rgba(6, 182, 212, 0.35);
-}
+/* =========================================================
+   GLASSMORPHISM PANELS (14–18px RADIUS & SUBTLE BORDERS)
+========================================================= */
 
 .glass-panel {
-  background: rgba(13, 15, 22, 0.75);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  background: var(--bg-card);
+
+  backdrop-filter: blur(14px);
+
+  -webkit-backdrop-filter: blur(14px);
+
+  border: 1px solid var(--border-color);
+
+  border-radius: 16px;
+
+  box-shadow: 0 4px 20px -2px rgba(18, 55, 42, 0.04);
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+
 }
 
+
+/* =========================================================
+   GLASS CARD HOVER
+========================================================= */
+
 .glass-card-hover {
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+
+  border-radius: 16px;
+
+  transition:
+    all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+
 }
 
 .glass-card-hover:hover {
-  transform: translateY(-4px);
-  border-color: rgba(245, 158, 11, 0.3);
-  box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.8), 0 0 20px -5px rgba(245, 158, 11, 0.15);
+
+  transform: translateY(-3px);
+
+  border-color: rgba(31, 138, 91, 0.35);
+
+  box-shadow:
+    0 16px 32px -8px rgba(18, 55, 42, 0.12),
+    0 0 20px -5px rgba(31, 138, 91, 0.18);
+
 }
 
-/* Film grain subtle overlay */
-.film-grain {
-  background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 0);
-  background-size: 24px 24px;
+
+/* =========================================================
+   3D GLASS CARD EFFECT
+========================================================= */
+
+.glass-3d {
+
+  background: var(--bg-card);
+
+  backdrop-filter: blur(16px);
+
+  -webkit-backdrop-filter: blur(16px);
+
+  border: 1px solid var(--border-color);
+
+  border-radius: 18px;
+
+  transform-style: preserve-3d;
+
+  perspective: 1000px;
+
+  transition:
+    transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.4s ease,
+    border-color 0.3s ease;
+
 }
 
-/* Custom scrollbar */
+.glass-3d:hover {
+
+  transform:
+    translateY(-6px)
+    rotateX(2deg)
+    rotateY(-2deg);
+
+  box-shadow:
+    0 24px 48px -12px rgba(18, 55, 42, 0.18),
+    0 0 24px -6px rgba(31, 138, 91, 0.22);
+
+  border-color: rgba(31, 138, 91, 0.4);
+
+}
+
+
+/* =========================================================
+   EMERALD & GOLD GLOWS (PREMIUM BIOPHILIC TECH)
+========================================================= */
+
+.glow-emerald {
+
+  box-shadow:
+    0 0 30px -5px var(--glow-emerald);
+
+  transition:
+    box-shadow 0.3s ease;
+
+}
+
+.glow-gold {
+
+  box-shadow:
+    0 0 30px -5px var(--glow-gold);
+
+  transition:
+    box-shadow 0.3s ease;
+
+}
+
+/* Backward compatibility aliases */
+.glow-cyan {
+  box-shadow: 0 0 30px -5px var(--glow-emerald);
+  transition: box-shadow 0.3s ease;
+}
+
+.glow-blue {
+  box-shadow: 0 0 30px -5px var(--glow-forest);
+  transition: box-shadow 0.3s ease;
+}
+
+
+/* =========================================================
+   BORDER GLOWS
+========================================================= */
+
+.border-glow-emerald {
+
+  border-color: rgba(31, 138, 91, 0.45);
+
+  box-shadow: 0 0 16px -3px rgba(31, 138, 91, 0.25);
+
+}
+
+.border-glow-gold {
+
+  border-color: rgba(231, 184, 75, 0.5);
+
+  box-shadow: 0 0 16px -3px rgba(231, 184, 75, 0.25);
+
+}
+
+.border-glow-cyan {
+  border-color: rgba(31, 138, 91, 0.45);
+  box-shadow: 0 0 16px -3px rgba(31, 138, 91, 0.25);
+}
+
+
+/* =========================================================
+   TEXT ACCENT GLOWS
+========================================================= */
+
+.text-glow-emerald {
+
+  text-shadow:
+    0 0 10px rgba(31, 138, 91, 0.4),
+    0 0 25px rgba(31, 138, 91, 0.2);
+
+}
+
+.text-glow-gold {
+
+  text-shadow:
+    0 0 10px rgba(231, 184, 75, 0.45),
+    0 0 25px rgba(231, 184, 75, 0.2);
+
+}
+
+.text-glow-cyan {
+  text-shadow:
+    0 0 10px rgba(31, 138, 91, 0.4),
+    0 0 25px rgba(31, 138, 91, 0.2);
+}
+
+.text-glow-blue {
+  text-shadow:
+    0 0 10px rgba(76, 175, 115, 0.4),
+    0 0 25px rgba(76, 175, 115, 0.2);
+}
+
+
+/* =========================================================
+   DIGITAL GRID BACKGROUND
+========================================================= */
+
+.bg-digital-grid {
+
+  background-size: 36px 36px;
+
+  background-image:
+
+    linear-gradient(
+      to right,
+      rgba(31, 138, 91, 0.05) 1px,
+      transparent 1px
+    ),
+
+    linear-gradient(
+      to bottom,
+      rgba(31, 138, 91, 0.05) 1px,
+      transparent 1px
+    );
+
+}
+
+
+/* =========================================================
+   DARK DIGITAL GRID
+========================================================= */
+
+.dark .bg-digital-grid {
+
+  background-image:
+
+    linear-gradient(
+      to right,
+      rgba(63, 174, 117, 0.07) 1px,
+      transparent 1px
+    ),
+
+    linear-gradient(
+      to bottom,
+      rgba(63, 174, 117, 0.07) 1px,
+      transparent 1px
+    );
+
+}
+
+
+/* =========================================================
+   LIGHT DIGITAL GRID
+========================================================= */
+
+.light .bg-digital-grid {
+
+  background-image:
+
+    linear-gradient(
+      to right,
+      rgba(31, 138, 91, 0.04) 1px,
+      transparent 1px
+    ),
+
+    linear-gradient(
+      to bottom,
+      rgba(31, 138, 91, 0.04) 1px,
+      transparent 1px
+    );
+
+}
+
+
+/* =========================================================
+   CUSTOM SCROLLBAR
+========================================================= */
+
 ::-webkit-scrollbar {
-  width: 7px;
-  height: 7px;
+
+  width: 6px;
+
+  height: 6px;
+
 }
+
 ::-webkit-scrollbar-track {
-  background: #090a0f;
+
+  background: transparent;
+
 }
+
 ::-webkit-scrollbar-thumb {
-  background: #272733;
+
+  background: #5D6962;
+
   border-radius: 9999px;
+
 }
+
 ::-webkit-scrollbar-thumb:hover {
-  background: #f59e0b;
+
+  background: #1F8A5B;
+
 }
 
-/* Cinematic widescreen aspect ratio helpers */
-.aspect-cinemascope {
-  aspect-ratio: 2.39 / 1;
+
+/* =========================================================
+   DARK SCROLLBAR
+========================================================= */
+
+.dark ::-webkit-scrollbar-thumb {
+
+  background: #2D3A32;
+
 }
 
-.aspect-imax {
-  aspect-ratio: 1.43 / 1;
+.dark ::-webkit-scrollbar-thumb:hover {
+
+  background: #3FAE75;
+
+}
+
+
+/* =========================================================
+   LIGHT SCROLLBAR
+========================================================= */
+
+.light ::-webkit-scrollbar-thumb {
+
+  background: #94a3b8;
+
+}
+
+
+/* =========================================================
+   SMOOTH THEME TRANSITIONS
+========================================================= */
+
+* {
+
+  transition-property:
+    background-color,
+    border-color,
+    color,
+    box-shadow;
+
+  transition-duration: 0.2s;
+
+  transition-timing-function: ease;
+
+}
+
+
+/* =========================================================
+   PRESERVE 3D TRANSFORMS
+========================================================= */
+
+.preserve-3d {
+
+  transform-style: preserve-3d;
+
+}
+
+.perspective-3d {
+
+  perspective: 1000px;
+
+}
+
+
+/* =========================================================
+   FLOATING 3D ANIMATION
+========================================================= */
+
+.float-3d {
+
+  animation:
+    float3d 5s ease-in-out infinite;
+
+}
+
+@keyframes float3d {
+
+  0%,
+  100% {
+
+    transform:
+      translateY(0)
+      rotateX(0deg)
+      rotateY(0deg);
+
+  }
+
+  50% {
+
+    transform:
+      translateY(-8px)
+      rotateX(2deg)
+      rotateY(-2deg);
+
+  }
+
+}
+
+
+/* =========================================================
+   SOFT PULSE GLOW
+========================================================= */
+
+.pulse-glow {
+
+  animation:
+    pulseGlow 3s ease-in-out infinite;
+
+}
+
+@keyframes pulseGlow {
+
+  0%,
+  100% {
+
+    box-shadow:
+      0 0 15px
+      rgba(6, 182, 212, 0.15);
+
+  }
+
+  50% {
+
+    box-shadow:
+      0 0 35px
+      rgba(6, 182, 212, 0.35);
+
+  }
+
+}
+
+
+/* =========================================================
+   THEME-AWARE CARD
+========================================================= */
+
+.theme-card {
+
+  background: var(--bg-card);
+
+  border: 1px solid var(--border-color);
+
+  color: var(--text-heading);
+
+  backdrop-filter: blur(16px);
+
+  -webkit-backdrop-filter: blur(16px);
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+
+}
+
+
+/* =========================================================
+   LIGHT MODE BODY
+========================================================= */
+
+html.light body {
+
+  background-color: #F7F4ED;
+
+  color: #18201C;
+
+}
+
+
+/* =========================================================
+   DARK MODE BODY
+========================================================= */
+
+html.dark body {
+
+  background-color: #0D1511;
+
+  color: #F5F3EA;
+
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+
+    animation-duration: 0.01ms !important;
+
+    animation-iteration-count: 1 !important;
+
+    scroll-behavior: auto !important;
+
+    transition-duration: 0.01ms !important;
+
+  }
+
+}
+/* =========================================================
+   CAMPUSNOVA 3D ANIMATION SYSTEM
+   ========================================================= */
+
+.three-d-background {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+  perspective: 1200px;
+}
+
+/* Make application content appear above 3D layer */
+
+#root {
+  position: relative;
+  z-index: 1;
+}
+
+/* =========================================================
+   3D ORBS (EMERALD & WARM GOLD HALOS)
+   ========================================================= */
+
+.three-d-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(1px);
+  transform-style: preserve-3d;
+  opacity: 0.22;
+}
+
+/* Light mode */
+
+.orb-one {
+  width: 280px;
+  height: 280px;
+  top: 8%;
+  left: -80px;
+  background:
+    radial-gradient(
+      circle at 30% 30%,
+      rgba(31, 138, 91, 0.6),
+      rgba(18, 55, 42, 0.15),
+      transparent 70%
+    );
+  box-shadow:
+    0 0 80px rgba(31, 138, 91, 0.2);
+}
+
+.orb-two {
+  width: 360px;
+  height: 360px;
+  right: -120px;
+  bottom: 5%;
+  background:
+    radial-gradient(
+      circle at 40% 40%,
+      rgba(231, 184, 75, 0.55),
+      rgba(76, 175, 115, 0.15),
+      transparent 70%
+    );
+  box-shadow:
+    0 0 100px rgba(231, 184, 75, 0.18);
+}
+
+/* =========================================================
+   3D CUBES
+   ========================================================= */
+
+.three-d-cube {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+
+  transform-style: preserve-3d;
+
+  border: 1px solid rgba(31, 138, 91, 0.2);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(31, 138, 91, 0.12),
+      rgba(231, 184, 75, 0.04)
+    );
+
+  backdrop-filter: blur(4px);
+
+  box-shadow:
+    15px 15px 40px rgba(18, 55, 42, 0.08),
+    inset 0 0 25px rgba(31, 138, 91, 0.08);
+
+  border-radius: 16px;
+}
+
+.cube-one {
+  top: 25%;
+  right: 12%;
+}
+
+.cube-two {
+  bottom: 22%;
+  left: 10%;
+  width: 55px;
+  height: 55px;
+}
+
+/* =========================================================
+   3D RING
+   ========================================================= */
+
+.three-d-ring {
+  position: absolute;
+
+  width: 180px;
+  height: 180px;
+
+  top: 45%;
+  left: 50%;
+
+  transform:
+    translate(-50%, -50%)
+    rotateX(65deg);
+
+  border-radius: 50%;
+
+  border: 2px solid rgba(31, 138, 91, 0.2);
+
+  box-shadow:
+    0 0 40px rgba(31, 138, 91, 0.1),
+    inset 0 0 30px rgba(231, 184, 75, 0.05);
+}
+
+/* =========================================================
+   DARK MODE
+   ========================================================= */
+
+.dark .three-d-background {
+  opacity: 1;
+}
+
+.dark .three-d-orb {
+  opacity: 0.32;
+}
+
+.dark .orb-one {
+  background:
+    radial-gradient(
+      circle at 30% 30%,
+      rgba(63, 174, 117, 0.8),
+      rgba(18, 55, 42, 0.3),
+      transparent 70%
+    );
+
+  box-shadow:
+    0 0 100px rgba(63, 174, 117, 0.25);
+}
+
+.dark .orb-two {
+  background:
+    radial-gradient(
+      circle at 40% 40%,
+      rgba(231, 184, 75, 0.7),
+      rgba(18, 55, 42, 0.2),
+      transparent 70%
+    );
+
+  box-shadow:
+    0 0 100px rgba(231, 184, 75, 0.22);
+}
+
+.dark .three-d-cube {
+  border-color: rgba(63, 174, 117, 0.25);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(63, 174, 117, 0.15),
+      rgba(21, 32, 25, 0.4)
+    );
+
+  box-shadow:
+    15px 15px 50px rgba(0, 0, 0, 0.45),
+    inset 0 0 30px rgba(63, 174, 117, 0.12);
+}
+
+.dark .three-d-ring {
+  border-color: rgba(63, 174, 117, 0.25);
+
+  box-shadow:
+    0 0 50px rgba(63, 174, 117, 0.15),
+    inset 0 0 30px rgba(231, 184, 75, 0.08);
+}
+
+/* =========================================================
+   REDUCE MOTION FOR ACCESSIBILITY
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .three-d-background * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .orb-one {
+    width: 180px;
+    height: 180px;
+  }
+
+  .orb-two {
+    width: 220px;
+    height: 220px;
+  }
+
+  .three-d-cube {
+    width: 45px;
+    height: 45px;
+  }
+
+  .three-d-ring {
+    width: 120px;
+    height: 120px;
+  }
 }

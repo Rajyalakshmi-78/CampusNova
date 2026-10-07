@@ -1,153 +1,157 @@
-# 🎬 CINEMATIC CANVAS — Next-Gen Film Production & 3D Stagecraft Platform
+# 🏛️ CAMPUSNOVA — ADVANCED SMART CAMPUS FRONTEND
 
-> A premier, Awwwards-caliber interactive film studio web platform engineered with **React 19**, **JavaScript**, **Tailwind CSS**, **Three.js 3D WebGL**, and **Framer Motion**.
-
----
-
-## 🌟 Project Highlights & 12 Complete Pages
-
-1. **Home / Hero Showcase (`/home`)**
-   - Interactive 3D particle starfield & rotating gyroscope cinema aperture in Three.js.
-   - Dynamic spotlight productions carousel with 4K screener trailer player.
-   - Studio statistics ribbon (140+ Films, $1.2B+ Reach, 250m² LED Volume, 98% Critic score).
-   - 4 Pillars of Disruptive Cinematography.
-
-2. **Films Vault (`/projects`)**
-   - Filterable catalog (Sci-Fi, Feature Film, Virtual Production, Commercial, Documentary).
-   - Real-time search by title, director, and genre.
-   - Movie poster cards with aspect ratio badges (2.39:1 CinemaScope, 1.43:1 IMAX) and instant trailer playback.
-
-3. **Feature Case Study (`/project-detail`)**
-   - Deep dive into *"CHRONO: ODYSSEY 2088"*.
-   - Director's log & statement by Elena Vance.
-   - Multi-pass VFX compositing progression (Practical Stage Plate ➔ Unreal Nanite Mesh ➔ ACES Kodak 2383 Grade).
-   - Authentic Courier New screenplay excerpt viewer.
-   - Spectral ACEScc color palette swatches with HEX codes.
-
-4. **Live 3D Virtual Stage (`/studio-3d`)**
-   - Real-time interactive 3D WebGL virtual production stage.
-   - 4 Lighting rigs: *Neo-Tokyo Cyberpunk*, *35mm Golden Hour*, *Film Noir*, *Deep Space Ice Moon*.
-   - Dynamic optical focal length simulator (18mm Ultra Wide up to 135mm Telephoto) with real-time camera FOV matrix recalculation.
-   - Volumetric atmospheric fog slider and rotating gimbal turntable.
-
-5. **Visual Storyboard Canvas (`/storyboard`)**
-   - Interactive director shot sequencing board with dynamic aspect ratio gate masks (2.39:1 CinemaScope, 1.85:1 Academy, 1.43:1 IMAX).
-   - Shot beats detailing camera movements (Technocrane, Steadicam, Ronin 4D), lens focal lengths, framing types, and audio cues.
-   - Add custom shot beats and export full shot list with one click.
-
-6. **Color Lab & LUT Suite (`/color-lab`)**
-   - Interactive before/after split-screen comparison slider.
-   - Drag horizontally to compare RAW ARRI Log C3 sensor dynamic range against final film emulation.
-   - 4 Hollywood LUT profiles: *Kodak 2383 Print*, *Neo-Tokyo Cyberpunk*, *Dune Warm Dust*, *Silver Bleach Bypass*.
-   - Live animated 100-IRE RGB Waveform monitor with Exposure and Saturation grading dials.
-
-7. **Soundtrack & Audio Stem Mixer (`/soundtrack`)**
-   - Interactive 5-channel stems console:
-     - 🎻 *Orchestral Strings (Philharmonic)*
-     - 🎺 *Cinematic Brass & Horn Swell*
-     - 🎹 *Analog Sub Bass (Moog Sub 37)*
-     - ⚡ *Cyber Arpeggiator (Prophet-6)*
-     - 🌧️ *Atmos Foley & Rain Hydrophone*
-   - Solo / Mute toggles and volume sliders per track with audio spectrum animations.
-
-8. **Cinema Hardware Arsenal (`/gear`)**
-   - Full technical camera and optical lens inventory (ARRI Alexa 35, RED V-Raptor XL 8K, Cooke Anamorphic /i, StageCraft LED Wall, Ronin 4D Flex).
-   - Interactive side-by-side flagship camera comparison modal (Sensor Size, Dynamic Range, Max FPS, Color Science, ND Filters).
-
-9. **Directors & Crew Collective (`/creators`)**
-   - Portfolio directory of directors, ASC/BSC cinematographers, Unreal Engine VFX supervisors, and master colorists.
-   - Accolades, notable filmography badges, and direct shoot inquiry dispatch.
-
-10. **Journal & Masterclasses (`/journal`)**
-    - Technical essays on anamorphic physics, Unreal Engine ICVFX, ACES color science, and Dolby Atmos spatial audio.
-    - Topic filtering, reader modal, and interactive appreciation counter.
-
-11. **Production Packages & Budget Estimator (`/pricing`)**
-    - 3 Transparent tiers: *Indie Narrative*, *Commercial / Brand Anthem*, *Hollywood Feature*.
-    - Interactive real-time budget calculator: dynamically compute estimated cost based on shoot days, camera package, LED volume days, and Dolby Atmos master.
-    - FAQ accordion.
-
-12. **Production Booking & Script Terminal (`/contact`)**
-    - High-conversion inquiry form with budget selector, target shoot date picker, script synopsis field, and NDA request.
-    - Golden cinematic confetti celebration on form submission.
-    - Global stage directory with active timezones (Los Angeles HQ, London Pinewood, Tokyo Post Lab).
+> **"Campus Life, Reimagined."**
+> A futuristic smart-campus digital platform uniting student services, facility intelligence, issue telemetry, campus events, lost & found algorithmic matching, spatial map navigation, 3D AI assistance, and unified campus safety into one cohesive ecosystem.
 
 ---
 
-## 🚀 Step-by-Step: How to Run in VS Code
+## ⚡ Absolute Technology Requirements
+
+* **React.js 19**
+* **JavaScript (ESM)**
+* **Vite**
+* **Tailwind CSS v4**
+* **React Router v7**
+* **Lucide React Icons**
+* **Three.js & React Three Fiber**
+* **Local State, LocalStorage & Simulated Telemetry**
+* **100% Frontend-Only** — Zero backend or external API dependency. Everything runs client-side.
+
+---
+
+## 🎨 Strict Color System (ZERO Purple Rule)
+
+CampusNova is designed with a strict, high-tech aesthetic: **Apple + Tesla + modern SaaS + futuristic university**.
+
+* **Primary Palette**:
+  * **Midnight Navy**: `#030712`, `#050B18`, `#0B1224`, `#111827`
+  * **Electric Blue**: `#2563EB`, `#3B82F6`
+  * **Electric Cyan**: `#06B6D4`, `#00D9FF`
+  * **Crisp White**: `#F8FAFC`, `#FFFFFF`
+* **Functional Semantic Accents**:
+  * **Success**: `#22C55E` (Green)
+  * **Warning**: `#F59E0B` (Amber)
+  * **Emergency**: `#EF4444` (Red)
+  * **Neutral**: `#64748B`, `#94A3B8` (Slate Gray)
+* **Strict Validation**: **ABSOLUTELY NO PURPLE**, violet, lavender, magenta, fuchsia, or pink anywhere in 3D scenes, UI cards, gradients, or shadows.
+
+---
+
+## 🌗 Dark Mode + Light Mode — Mandatory
+
+CampusNova features a full dual-theme architecture toggled by a visible navbar control (`☀ Light / ◐ Dark`):
+* **Dark Mode**: Premium futuristic deep-space midnight navy with glowing electric cyan telemetry.
+* **Light Mode**: Ultra-crisp, modern SaaS editorial white and slate with blue accents.
+* **Persistence**: Persists in `localStorage` across page refreshes and updates all cards, typography, borders, and 3D background lighting.
+
+---
+
+## 🌌 3D Component System
+
+1. **`Campus3DBackground`**:
+   * Low-poly particle network of 900+ cyber nodes in cyan, deep blue, and ice white.
+   * Floating abstract campus towers and rotating concentric gyroscope rings.
+   * Mouse parallax reactivity on desktop.
+   * Automatic performance optimization for mobile devices.
+   * Pure CSS animated gradient fallback if WebGL is unavailable.
+2. **`AIOrb`** (Nova AI 3D Interface):
+   * Deep navy core with emissive electric blue interior.
+   * Cyan icosahedron wireframe shield.
+   * Orbiting dual gyroscope rings and micro-particle halo.
+   * Dynamic pulse and acceleration when answering queries.
+   * Zero purple; 100% blue, cyan, and navy.
+
+---
+
+## 🚀 The 12 Comprehensive Pages
+
+| Route | Page | Key Features |
+|---|---|---|
+| `/` | **Home** | Full-screen cinematic hero, floating glass stats, bento grid ecosystem, student life showcase, animated 6-node neural connection diagram. |
+| `/login` | **Student Login** | Biometric demo login, credentials validation, instant 1-click Auto-Fill student account, session persistence. |
+| `/dashboard` | **Student Dashboard** | Personalized student greeting, live time/date, 5 telemetry metric cards, quick operations buttons, activity timeline, hourly campus load bar chart. |
+| `/issues` | **Smart Issues** | Searchable facility incident ledger, category pills, status filter (Reported, In Progress, Resolved, Critical), priority sorting. |
+| `/report` | **Report Issue** | Split-screen layout: left cinematic campus engineering plate, right interactive diagnostic form with drag-and-drop photo upload preview and animated `CN-XXXX` submission confirmation. |
+| `/lost-found` | **Lost & Found** | Marketplace-style catalog with search, category filtering, circular SVG smart match percentage gauges (94%+), and modal forms for reporting lost or found items. |
+| `/events` | **Campus Events** | Hero convention showcase (*Campus Innovation Summit 2026*), category filters (Tech, Hackathon, Cultural, Sports, Workshop, Clubs), and instant one-click smart pass registration. |
+| `/map` | **Campus Map** | Isometric spatial navigation canvas with 9 glowing interactive building markers (CSE Tower, Library, Main Block, etc.), occupancy rate bars, and floating detail panels. |
+| `/ai` | **Nova AI** | Futuristic spatial dialogue console powered by the 3D AI Orb, prompt suggestions, predefined responses for buildings, tickets, and passes, and real-time thinking states. |
+| `/safety` | **Campus Safety** | High-reliability command center featuring emergency 1-click dispatch for Security, Medical Trauma, Fire, and Distress Beacons + active safety zones monitoring. |
+| `/admin` | **Campus Intelligence** | Central analytics center displaying resolution rates, 4-pillar campus health progress bars, category breakdown distributions, and recent reports table. |
+| `/profile` | **Student Profile** | Verified student credentials (Alex Rivera, CN-8849), digital barcode RFID pass, merit achievement badges, and session sign out. |
+
+---
+
+## 💻 Step-by-Step: How to Run in VS Code
 
 ### Step 1: Open the Project in VS Code
 1. Launch **Visual Studio Code**.
-2. Go to **File ➔ Open Folder...** (or press `Ctrl+K Ctrl+O` on Windows / `Cmd+O` on Mac).
+2. Click **File ➔ Open Folder...** (`Ctrl + K, Ctrl + O`).
 3. Select the folder:
    ```plaintext
    C:\Users\rajal\.gemini\antigravity\scratch\cinematic-canvas
    ```
-4. Open the integrated terminal in VS Code (`Ctrl + ~` or **Terminal ➔ New Terminal**).
 
-### Step 2: Install Dependencies & Run Development Server
+### Step 2: Install Dependencies & Run
+Open the integrated terminal in VS Code (`Ctrl + ~`) and execute:
 ```bash
 # If running for the first time
 npm install
 
-# Start the lightning-fast Vite dev server
+# Start the Vite development server
 npm run dev
 ```
 
 ### Step 3: Open in Browser
-Open your browser and navigate to:
+Visit the local server address:
 ```plaintext
 http://localhost:5173
 ```
 
 ---
 
-## 🌐 How to Generate a Live Public Link (Free Deployment)
+## 🌐 How to Generate a Live Public URL (Free Deployment)
 
-You can deploy this project in under 2 minutes using either **Vercel** (recommended) or **Netlify**:
+### Option 1: Deploy with Vercel (Recommended)
+1. Push your repository to GitHub (see instructions below).
+2. Go to [https://vercel.com](https://vercel.com) and log in with GitHub.
+3. Click **"Add New..." ➔ "Project"** and select your `campusnova` repository.
+4. Vercel automatically detects the Vite configuration:
+   * **Framework Preset**: `Vite`
+   * **Build Command**: `npm run build`
+   * **Output Directory**: `dist`
+5. Click **Deploy**. Your live production URL will be ready in ~30 seconds (e.g., `https://campusnova.vercel.app`)!
 
-### Option A: Deploy with Vercel (Instant & Free)
-1. Install Vercel CLI (optional) or push to GitHub (see below).
-2. Go to [https://vercel.com](https://vercel.com) and sign in with GitHub.
-3. Click **"Add New..." ➔ "Project"**.
-4. Select your **`cinematic-canvas`** GitHub repository.
-5. Vercel automatically detects **Vite** and **React**. Leave the default build settings:
-   - **Framework Preset**: `Vite`
-   - **Build Command**: `npm run build`
-   - **Output Directory**: `dist`
-6. Click **Deploy**.
-7. In ~30 seconds, Vercel will generate your live production URL (e.g., `https://cinematic-canvas.vercel.app`)!
-
-### Option B: Deploy with Netlify
-1. Go to [https://app.netlify.com](https://app.netlify.com).
-2. Click **"Add new site" ➔ "Import an existing project" ➔ "GitHub"**.
-3. Choose `cinematic-canvas`.
-4. Click **Deploy Site**. Netlify will provide a live URL (e.g., `https://cinematic-canvas.netlify.app`).
+### Option 2: Deploy with Netlify Drop (Instant Zero-Config)
+1. Build the production bundle locally:
+   ```bash
+   npm run build
+   ```
+2. Navigate to [https://app.netlify.com/drop](https://app.netlify.com/drop).
+3. Drag and drop the `dist/` folder directly onto the page for an immediate live link.
 
 ---
 
 ## 🐙 Step-by-Step: How to Push to GitHub
 
-Run these commands inside your VS Code terminal:
+Run these commands in your VS Code terminal:
 
 ```bash
 # 1. Stage all files
 git add .
 
-# 2. Create your initial commit
-git commit -m "feat: initial release of Cinematic Canvas with 12 pages and 3D WebGL stage"
+# 2. Commit the changes
+git commit -m "feat: complete CampusNova smart campus platform with 12 pages, 3D WebGL, and dual themes"
 
 # 3. Create a new repository on GitHub:
-#    - Go to https://github.com/new
-#    - Name it: cinematic-canvas
-#    - Keep it Public and DO NOT initialize with README (already created)
+#    - Visit https://github.com/new
+#    - Name: campusnova
+#    - Set to Public (do NOT initialize with README)
 #    - Click "Create repository"
 
-# 4. Set main branch and link your remote repository
+# 4. Link remote origin and push
+git remote add origin https://github.com/YOUR_GITHUB_USERNAME/campusnova.git
 git branch -M main
-git remote add origin https://github.com/YOUR_GITHUB_USERNAME/cinematic-canvas.git
-
-# 5. Push to GitHub
 git push -u origin main
 ```
 
@@ -155,31 +159,29 @@ git push -u origin main
 
 ## 💼 LinkedIn Post Template (Copy & Paste Ready)
 
-Here is an optimized post copy tailored for LinkedIn to maximize reach, showcasing both the design and frontend engineering:
-
 ```markdown
-🚀 Excited to unveil my latest project: CINEMATIC CANVAS 🎬 — A next-gen interactive film production studio & 3D virtual stagecraft web platform!
+🚀 Thrilled to introduce my latest engineering project: CAMPUSNOVA 🏛️ — "Campus Life, Reimagined."
 
-Inspired by cutting-edge cinema tech (ARRI Alexa 35, Panavision Anamorphic, and Unreal Engine StageCraft LED Volumes), I built an immersive 12-page web application fusing classical cinematic aesthetics with modern WebGL and React 19.
+CampusNova is a next-generation smart-campus digital platform designed with the design ethos of Apple + Tesla + modern enterprise SaaS. It unifies student logistics, facility intelligence, automated issue tracking, and campus security into a cohesive, high-performance web experience.
 
-✨ Key Features:
-🔹 Live 3D Virtual Production Stage (Three.js): Interactive 3-point lighting schematics, dynamic focal length zoom (18mm–135mm), and real-time volumetric atmospheric haze.
-🔹 Interactive 3D Hero Aperture: Stardust particle field with gyro-responsive physics.
-🔹 Hollywood Color Lab: Real-time before/after split slider comparing RAW ARRI Log C3 dynamic range against ACES Kodak 2383 film print emulation + live RGB waveform scopes.
-🔹 Interactive Storyboard Suite: Visual shot sequencing with 2.39:1 CinemaScope and 1.43:1 IMAX gate masks + instant shotlist export.
-🔹 Audio Scoring Console: 5-channel stems mixer (Philharmonic strings, Moog sub-bass, foley) with real-time frequency visualizer.
-🔹 Dynamic Shoot Budget Estimator: Interactive production calculator adjusting camera packages, LED stage days, and Dolby Atmos mastering.
+✨ Architectural Highlights:
+🔹 3D Campus Mesh & AI Orb (Three.js): Interactive low-poly particle network and custom 3D AI Orb responding to real-time queries.
+🔹 Smart Issues Ledger: 18.4-min average resolution tracker with status badges, priority sorting, and drag-and-drop diagnostic photo upload.
+🔹 Algorithmic Lost & Found: Automated similarity matching with SVG circular confidence progress gauges (94%+ match rate).
+🔹 Interactive Spatial Map: Isometric campus grid with live building telemetry, quiet zone sensors, and occupancy monitoring across 9 complexes.
+🔹 Safety Command Center: 24/7 one-click emergency dispatch, safety zones verification, and illuminated blue-light tower network.
+🔹 Dark Mode + Light Mode: Persistent dual-theme engine engineered with Midnight Navy, Electric Blue, and Cyan (strictly Zero Purple).
 
 🛠️ Tech Stack:
-• Frontend: React 19, JavaScript (ESM)
-• Styling: Tailwind CSS
-• 3D & Physics: Three.js WebGL & Framer Motion
-• Icons & Polish: Lucide React & Canvas Confetti
+• Core: React 19, JavaScript (ESM), Vite
+• Routing & State: React Router v7, React Context, LocalStorage
+• Styling & Icons: Tailwind CSS v4, Lucide React
+• 3D & Graphics: Three.js, Canvas WebGL, SVG Visualizations
 
 🔗 Live Demo: [PASTE_YOUR_VERCEL_OR_NETLIFY_LINK_HERE]
 💻 GitHub Code: [PASTE_YOUR_GITHUB_REPO_LINK_HERE]
 
-I'd love to hear your feedback on the 3D lighting simulator and the Color Lab! Drop your thoughts in the comments below. 👇
+I'd love to hear your feedback on the 3D Nova AI interface and spatial campus map! Drop your thoughts below. 👇
 
-#ReactJS #ThreeJS #WebDevelopment #Frontend #TailwindCSS #UIUX #Cinematography #VirtualProduction #CreativeCoding #JavaScript #Portfolio
+#ReactJS #ThreeJS #WebDevelopment #Frontend #TailwindCSS #UIUX #SmartCampus #JavaScript #Innovation #EdTech #SoftwareEngineering
 ```
